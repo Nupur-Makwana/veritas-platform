@@ -1,0 +1,124 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // 0. Global Safety Net
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // --- 1. Primitives ---
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    function isAdmin() {
+      return isSignedIn() && (
+        exists(/databases/$(database)/documents/profiles/$(request.auth.uid)) && 
+        get(/databases/$(database)/documents/profiles/$(request.auth.uid)).data.role == 'admin'
+      );
+    }
+
+    function hasRole(role) {
+      return isSignedIn() && 
+             exists(/databases/$(database)/documents/profiles/$(request.auth.uid)) && 
+             get(/databases/$(database)/documents/profiles/$(request.auth.uid)).data.role == role;
+    }
+
+    function isWorker() {
+      return hasRole('worker') || isAdmin();
+    }
+
+    // --- 2. Validation Blueprints ---
+
+    function isValidProfile(p) {
+      return p.keys().hasAll(['uid', 'role', 'name']) &&
+             p.keys().size() <= 10 &&
+             p.uid is string && p.uid.size() <= 128 &&
+             p.role in ['citizen', 'worker', 'admin'] &&
+             p.name is string && p.name.size() > 0 && p.name.size() <= 100;
+    }
+
+    function isValidComplaint(c) {
+      return c.keys().hasAll(['id', 'citizenId', 'title', 'status', 'trackId']) &&
+             c.keys().size() <= 25 &&
+             c.id is string &&
+             c.citizenId is string &&
+             c.title is string && c.title.size() > 0 && c.title.size() <= 200 &&
+             c.status in ['reported', 'under_process', 'solved', 'rejected'] &&
+             c.trackId is string && c.trackId.size() <= 20 &&
+             (!('severity' in c) || (c.severity in ['low', 'medium', 'high', 'critical']));
+    }
+
+    function isValidWorker(w) {
+      return w.keys().hasAll(['id', 'name', 'department', 'status']) &&
+             w.keys().size() <= 6 &&
+             w.id is string &&
+             w.name is string && w.name.size() > 0 && w.name.size() <= 100 &&
+             w.department is string && w.department.size() <= 100 &&
+             w.status in ['assigned', 'free'] &&
+             (!('tasksCount' in w) || (w.tasksCount is int || w.tasksCount is number));
+    }
+
+    // --- 3. Match Blocks ---
+
+    match /profiles/{userId} {
+      allow get: if isSignedIn() && (request.auth.uid == userId || isAdmin() || isWorker());
+      allow list: if isAdmin();
+      allow create: if isOwner(userId) && isValidProfile(incoming());
+      allow update: if (
+        isAdmin() ||
+        (isOwner(userId) && isValidProfile(incoming()))
+      );
+    }
+
+    match /complaints/{complaintId} {
+      allow get: if isSignedIn() && (existing().citizenId == request.auth.uid || isAdmin() || isWorker());
+      allow list: if isSignedIn() && (isWorker() || isAdmin());
+      allow list: if isSignedIn() && resource.data.citizenId == request.auth.uid;
+
+      allow create: if isSignedIn() && 
+                      incoming().citizenId == request.auth.uid && 
+                      isValidComplaint(incoming());
+
+      allow update: if isValidComplaint(incoming()) && (
+        isAdmin() ||
+        isWorker() ||
+        (isOwner(existing().citizenId) && existing().status == 'reported')
+      );
+    }
+
+    match /workers/{workerId} {
+      allow read: if isSignedIn();
+      allow create: if isAdmin() && isValidWorker(incoming());
+      allow update: if (isAdmin() || isWorker()) && isValidWorker(incoming());
+      allow delete: if isAdmin();
+    }
+
+    match /system/{id} {
+      allow read: if isSignedIn();
+      allow write: if isAdmin();
+    }
+
+    // Health Check
+    match /test/connection {
+      allow read: if true;
+    }
+  }
+}

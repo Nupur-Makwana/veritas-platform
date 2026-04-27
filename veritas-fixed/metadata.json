@@ -1,0 +1,9 @@
+{
+  "name": "Veritas by Team Agneya",
+  "description": "AI-powered civic complaint intelligence and workforce management system for India.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ],
+  "majorCapabilities": []
+}

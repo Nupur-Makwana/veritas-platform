@@ -1,0 +1,76 @@
+{
+  "entities": {
+    "Profile": {
+      "title": "Profile",
+      "description": "User profile information",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "role": { "type": "string", "enum": ["citizen", "worker", "admin"] },
+        "name": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "department": { "type": "string" },
+        "language": { "type": "string" },
+        "createdAt": { "type": "number" },
+        "updatedAt": { "type": "number" }
+      },
+      "required": ["uid", "role", "name"]
+    },
+    "Complaint": {
+      "title": "Complaint",
+      "description": "Civic complaint details",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "citizenId": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "summary": { "type": "string" },
+        "aiSummary": { "type": "string" },
+        "category": { "type": "string" },
+        "severity": { "type": "string", "enum": ["low", "medium", "high", "critical"] },
+        "status": { "type": "string", "enum": ["reported", "under_process", "solved", "rejected"] },
+        "trackId": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "fakeScore": { "type": "number" },
+        "fakeReason": { "type": "string" },
+        "workerId": { "type": "string" },
+        "assignmentSuggestion": { "type": "string" },
+        "assignmentType": { "type": "string", "enum": ["ai", "manual"] },
+        "createdAt": { "type": "number" },
+        "updatedAt": { "type": "number" },
+        "address": { "type": "string" },
+        "block": { "type": "string" },
+        "eventType": { "type": "string" }
+      },
+      "required": ["id", "citizenId", "title", "status", "trackId", "createdAt", "updatedAt"]
+    },
+    "Worker": {
+      "title": "Worker",
+      "description": "Workforce metadata",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "department": { "type": "string" },
+        "status": { "type": "string", "enum": ["assigned", "free"] },
+        "tasksCount": { "type": "number" }
+      },
+      "required": ["id", "name", "department", "status"]
+    }
+  },
+  "firestore": {
+    "/profiles/{userId}": {
+      "schema": "Profile",
+      "description": "User profiles"
+    },
+    "/complaints/{complaintId}": {
+      "schema": "Complaint",
+      "description": "Civic complaints"
+    },
+    "/workers/{workerId}": {
+      "schema": "Worker",
+      "description": "List of workers"
+    }
+  }
+}
