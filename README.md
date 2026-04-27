@@ -1,6 +1,6 @@
 #  Veritas — AI-Powered Civic Intelligence System
 
- **Prototype:** --to be updated
+ **Prototype:** https://ai.studio/apps/b6ffbb42-4569-4f9b-b77e-7bc2ce1c7b18
  
  **Prototype / Demo Video:** ---to be updated soon 
  
