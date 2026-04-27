@@ -4,7 +4,7 @@
  
  **Prototype / Demo Video:** ---to be updated soon 
  
- **Live Demo:** ---to be updated
+ **Live Website:** https://veritas-platform-two.vercel.app
  
  ---
  
