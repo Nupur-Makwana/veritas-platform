@@ -14,7 +14,7 @@
 ### *Turning citizen voices into actionable intelligence.*
 
 <br/>
-[![Prototype](https://img.shields.io/badge/🧪_Prototype-AI_Studio-0a0a0a?style=for-the-badge&labelColor=111)](https://ai.studio/apps/b6ffbb42-4569-4f9b-b77e-7bc2ce1c7b18?fullscreenApplet=true)
+[![Prototype Demo](https://img.shields.io/badge/🎬_Prototype_Demo-Watch-0a0a0a?style=for-the-badge&labelColor=111)](https://ai.studio/apps/b6ffbb42-4569-4f9b-b77e-7bc2ce1c7b18?fullscreenApplet=true)
 
 [![Prototype Demo](soon to be uploaded)
 
