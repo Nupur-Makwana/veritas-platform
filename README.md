@@ -13,13 +13,11 @@
 <br>
 *Turning citizen voices into actionable intelligence.*
 
-&nbsp;
-
 [🖊 Prototype](https://ai.studio/apps/b6ffbb42-4569-4f9b-b77e-7bc2ce1c7b18?fullscreenApplet=true)
 
 [🌐 Live App](https://veritas-platform-two.vercel.app)
 
-[🔥 Team: Agneya](#)
+[🔥 Team: Agneya](https://github.com/Nupur-Makwana/veritas-platform)
 
 <br/>
 
