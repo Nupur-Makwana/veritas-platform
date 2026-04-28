@@ -14,10 +14,12 @@
 ### *Turning citizen voices into actionable intelligence.*
 
 <br/>
+[![Prototype](https://img.shields.io/badge/🧪_Prototype-AI_Studio-0a0a0a?style=for-the-badge&labelColor=111)](https://ai.studio/apps/b6ffbb42-4569-4f9b-b77e-7bc2ce1c7b18?fullscreenApplet=true)
 
-[![Prototype]([https://img.shields.io/badge/🧪_Prototype-AI_Studio-0a0a0a?style=for-the-badge&labelColor=111)](https://ai.studio/apps/b6ffbb42-4569-4f9b-b77e-7bc2ce1c7b18](https://ai.studio/apps/b6ffbb42-4569-4f9b-b77e-7bc2ce1c7b18?fullscreenApplet=true))
 [![Prototype Demo](soon to be uploaded)
+
 [![Live App](https://img.shields.io/badge/🌐_Live_App-veritas--platform--two.vercel.app-0a0a0a?style=for-the-badge&labelColor=111)](https://veritas-platform-two.vercel.app)
+
 [![Team](https://img.shields.io/badge/🔥_Team-Agneya-0a0a0a?style=for-the-badge&labelColor=111)](https://github.com)
 
 <br/>
