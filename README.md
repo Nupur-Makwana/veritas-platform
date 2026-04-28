@@ -14,13 +14,14 @@
 ### *Turning citizen voices into actionable intelligence.*
 
 <br/>
-[![Prototype](https://img.shields.io/badge/🧪_Prototype-AI_Studio-0a0a0a?style=for-the-badge&labelColor=111)](https://ai.studio/apps/b6ffbb42-4569-4f9b-b77e-7bc2ce1c7b18?fullscreenApplet=true)
+<!-- Prototype Badge Button -->
+[![Prototype](https://img.shields.io/badge/🖊_Prototype-AI_Studio-0a0a0a?style=for-the-badge&labelColor=111)](https://ai.studio/apps/b6ffbb42-4569-4f9b-b77e-7bc2ce1c7b18?fullscreenApplet=true)
 
-[![Prototype Demo](soon to be uploaded)
+[![Prototype Demo](https://img.shields.io/badge/🎬_Prototype_Demo-Soon_to_be_uploaded-0a0a0a?style=for-the-badge&labelColor=111)]()
 
-[![Live App](https://img.shields.io/badge/🌐_Live_App-veritas--platform--two.vercel.app-0a0a0a?style=for-the-badge&labelColor=111)](https://veritas-platform-two.vercel.app)
+[![Live App](https://img.shields.io/badge/🌐_LIVE_APP-VERITAS--PLATFORM--TWO.VERCEL.APP-0a0a0a?style=for-the-badge&labelColor=111)](https://veritas-platform-two.vercel.app)
 
-[![Team](https://img.shields.io/badge/🔥_Team-Agneya-0a0a0a?style=for-the-badge&labelColor=111)](https://github.com)
+[![Team](https://img.shields.io/badge/🔥_TEAM-AGNEYA-0a0a0a?style=for-the-badge&labelColor=111)]()
 
 <br/>
 
