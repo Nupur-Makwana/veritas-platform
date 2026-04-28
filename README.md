@@ -181,8 +181,6 @@ Veritas converts raw inputs (images, videos, text) into structured reports, rout
 
 ##  Tech Stack
 
-> *(Update with your actual stack below)*
-
 | Layer | Technology |
 |---|---|
 | **Frontend** | React / Next.js |
@@ -221,7 +219,7 @@ veritas/
 
 ##  Vision
 
-We are building a smarter civic ecosystem — one where **citizen voices are not just heard, but understood and acted upon** through intelligent systems that leave no complaint behind.
+We are building a smarter civic ecosystem : one where **citizen voices are not just heard, but understood and acted upon** through intelligent systems that leave no complaint behind.
 
 Veritas is not just a complaint portal. It is a **civic intelligence layer** for local governments: turning noise into signal, and signal into action.
 
