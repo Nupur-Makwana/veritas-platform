@@ -25,7 +25,7 @@
 
 </div>
 
-## 📌 What is Veritas?
+##  What is Veritas?
 
 **Veritas** is an AI-driven civic intelligence platform that bridges the gap between citizen complaints and real-world government action.
 
@@ -40,7 +40,7 @@ Veritas converts raw inputs (images, videos, text) into structured reports, rout
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -69,9 +69,9 @@ Veritas converts raw inputs (images, videos, text) into structured reports, rout
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
-### 🧑‍💼 Citizen Portal
+###  Citizen Portal
 
 | Feature | Description |
 |---|---|
@@ -82,7 +82,7 @@ Veritas converts raw inputs (images, videos, text) into structured reports, rout
 | **Track ID System** | Unique complaint ID for real-time resolution tracking |
 | **Auto Escalation** | AI triggers social media escalation if a complaint remains unresolved past deadline |
 
-### 👷 Worker Portal
+###  Worker Portal
 
 | Feature | Description |
 |---|---|
@@ -92,7 +92,7 @@ Veritas converts raw inputs (images, videos, text) into structured reports, rout
 | **Citizen Context** | Full complaint details, severity, and citizen contact info per task |
 | **Department Routing** | Tasks auto-assigned by department relevance |
 
-### 🛡️ Admin / Control Office
+###  Admin / Control Office
 
 | Feature | Description |
 |---|---|
@@ -108,19 +108,19 @@ Veritas converts raw inputs (images, videos, text) into structured reports, rout
 
 ---
 
-## 🤖 AI Capabilities
+##  AI Capabilities
 
 ```
 ┌─────────────────────────────────────────────────────┐
 │                   AI ENGINE LAYERS                  │
 ├──────────────────────────────────────────────────────┤
-│  🖼️  Computer Vision    → Image & video analysis    │
-│  🧠  NLP                → Text understanding & NER  │
-│  🔢  Priority Engine    → Urgency scoring model     │
-│  🕵️  Fraud Detection    → Fake/scam complaint flag  │
-│  🔁  Auto-Assignment    → Department-worker routing │
-│  📈  Predictive Engine  → Trend & hotspot analysis  │
-│  📣  Escalation AI      → Social trigger logic      │
+│    Computer Vision    → Image & video analysis    │
+│    NLP                → Text understanding & NER  │
+│    Priority Engine    → Urgency scoring model     │
+│    Fraud Detection    → Fake/scam complaint flag  │
+│    Auto-Assignment    → Department-worker routing │
+│    Predictive Engine  → Trend & hotspot analysis  │
+│    Escalation AI      → Social trigger logic      │
 └──────────────────────────────────────────────────────┘
 ```
 
@@ -137,7 +137,7 @@ Veritas converts raw inputs (images, videos, text) into structured reports, rout
 
 ---
 
-## 🚀 Demo Flow
+##  Demo Flow
 
 ```
   CITIZEN                AI ENGINE              ADMIN              WORKER
@@ -164,7 +164,7 @@ Veritas converts raw inputs (images, videos, text) into structured reports, rout
 
 ---
 
-## 🌐 Platform Highlights
+##  Platform Highlights
 
 | Capability | Detail |
 |---|---|
@@ -178,7 +178,7 @@ Veritas converts raw inputs (images, videos, text) into structured reports, rout
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 > *(Update with your actual stack below)*
 
@@ -196,7 +196,7 @@ Veritas converts raw inputs (images, videos, text) into structured reports, rout
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 veritas/
@@ -218,7 +218,7 @@ veritas/
 
 ---
 
-## 🧭 Vision
+##  Vision
 
 We are building a smarter civic ecosystem — one where **citizen voices are not just heard, but understood and acted upon** through intelligent systems that leave no complaint behind.
 
@@ -228,7 +228,7 @@ Veritas is not just a complaint portal. It is a **civic intelligence layer** for
 
 ---
 
-## 🔥 Team Agneya
+##  Team Agneya
 
 > *"Agneya" — Sanskrit for "born of fire."*  
 > *Energy. Transformation. Unstoppable force.*
